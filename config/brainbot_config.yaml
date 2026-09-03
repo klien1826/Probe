@@ -1,0 +1,67 @@
+# ============================================================
+# Brainbot 主配置（七层认知架构集成）
+# 参考上游: https://github.com/bingogome/brainbot
+# 本文件同时被 src/core/brain.py 与 src/brainbot_adapters/policy_server.py 读取
+# ============================================================
+
+# ---- 认知架构总开关 ----
+cognitive:
+  enabled: true
+  # 快/慢双系统频率
+  fast_system_hz: 20          # 快系统：物理安全门禁（真实部署可到 1kHz，仿真环境取 20Hz 便于观测）
+  slow_system_hz: 1.5         # 慢系统：世界模型/认知决策
+  # 各层推理延迟预算（ms）
+  latency_budget_ms:
+    world_model: 50
+    memory_retrieval: 50
+    decision: 20
+    closed_loop: 500
+
+# ---- Brainbot remote_host 侧：AI 策略服务器 ----
+# 策略服务器将"四层大脑"封装为 Brainbot 可识别的 AI Provider（ZMQ REP）
+policy_server:
+  host: "127.0.0.1"
+  port: 5555
+  api_token: null            # 生产环境务必设置 token
+  endpoint_name: "get_action"
+  action_horizon: 1
+
+# ---- Brainbot 命令服务（hub 侧）集成 ----
+command_service:
+  ai_providers:
+    - name: "curiosity_policy"
+      type: "zmq"
+      endpoint: "tcp://127.0.0.1:5555"   # 指向本工程的 policy_server
+  mode: "ai"
+
+# ---- 控制服务（remote 侧）安全参数 ----
+control_service:
+  safety:
+    max_tilt: 15.0          # 最大倾斜角度 (度)
+    max_drop: 0.1           # 最大落差 (米)
+    min_battery: 10.0       # 最低电量 (%)
+
+# ---- 世界模型 / 输入层 ----
+world_model:
+  backend: "auto"           # auto | mwm | lightweight
+  latent_dim: 32
+  mwm:
+    model_path: null        # 指向 MWM 权重（GPU 环境）
+    device: "cuda:0"
+  lightweight:
+    # 在线贝叶斯线性动力学：每个已知物体类别维护一个后验模型
+    prior_cov_scale: 1.0
+    obs_noise: 0.05
+
+input_layer:
+  vision:
+    input_size: [224, 224]
+    feature_dim: 256
+    rate_hz: 30
+    backend: "auto"         # auto | torch | numpy
+  audio:
+    rate_hz: 1              # 按需触发
+    whisper_model: "tiny"   # 真实部署用 small/base
+    backend: "auto"         # auto | whisper | rule
+  proprioception:
+    rate_hz: 100

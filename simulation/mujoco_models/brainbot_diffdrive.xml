@@ -1,0 +1,44 @@
+<mujoco model="brainbot_diffdrive">
+  <!--
+    主动求知机器人 · 差速移动底盘 MJCF 定义
+    兼容 URLab 的 MJCF 导入（Unreal Robotics Lab 可拖入 Content Browser 生成 Articulation BP）
+    也兼容 MuJoCo 直接加载（src/simulation/mujoco_bridge.py）
+  -->
+  <compiler angle="radian" coordinate="local"/>
+  <option timestep="0.01" gravity="0 0 -9.81"/>
+
+  <default>
+    <joint type="hinge" axis="0 1 0" damping="0.1"/>
+    <geom type="cylinder" density="1000" friction="1.0 0.3 0.1"/>
+    <motor ctrlrange="-5 5"/>
+  </default>
+
+  <worldbody>
+    <light name="sun" pos="0 0 4" dir="0 0 -1" diffuse="0.9 0.9 0.9"/>
+    <geom name="floor" type="plane" size="5 5 0.1" rgba="0.75 0.78 0.8 1"/>
+    <camera name="top" pos="0 0 5" xyaxes="1 0 0 0 1 0" mode="fixed"/>
+
+    <!-- 机器人底盘 -->
+    <body name="chassis" pos="0 0 0.12">
+      <freejoint name="root"/>
+      <geom name="chassis_geom" type="box" size="0.16 0.13 0.06" mass="2.0" rgba="0.2 0.3 0.9 1"/>
+      <body name="wheel_left" pos="-0.10 0.16 -0.06">
+        <joint name="wheel_left_joint" type="hinge" axis="0 1 0"/>
+        <geom name="wheel_left_geom" type="cylinder" size="0.055 0.025" rgba="0.1 0.1 0.1 1"/>
+      </body>
+      <body name="wheel_right" pos="-0.10 -0.16 -0.06">
+        <joint name="wheel_right_joint" type="hinge" axis="0 1 0"/>
+        <geom name="wheel_right_geom" type="cylinder" size="0.055 0.025" rgba="0.1 0.1 0.1 1"/>
+      </body>
+      <!-- 前方“感知头”（碰撞体，用于接近检测） -->
+      <body name="head" pos="0.16 0 0.05">
+        <geom name="head_geom" type="box" size="0.02 0.10 0.05" rgba="0.9 0.85 0.1 1"/>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor name="left_motor" joint="wheel_left_joint"/>
+    <motor name="right_motor" joint="wheel_right_joint"/>
+  </actuator>
+</mujoco>

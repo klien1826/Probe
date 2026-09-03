@@ -1,0 +1,746 @@
+{
+  "scenarios": [
+    {
+      "scenario": "A · 提问路径（人类在场 → 主动提问学习）",
+      "trace": [
+        {
+          "step": 0,
+          "mode": "safe_idle",
+          "uncertainty": 0.0,
+          "decision": "explore",
+          "question": null,
+          "action": 5.0,
+          "target": "obj_red_box"
+        },
+        {
+          "step": 1,
+          "mode": "deep_dive",
+          "uncertainty": 0.391,
+          "decision": "ask_human",
+          "question": "请问这个红色的中等物体是什么？",
+          "action": 4.0,
+          "target": "obj_red_box"
+        },
+        {
+          "step": 2,
+          "mode": "deep_dive",
+          "uncertainty": 0.574,
+          "decision": "ask_human",
+          "question": "请问这个蓝色的小物体是什么？",
+          "action": 4.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 3,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 4,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 5,
+          "mode": "safe_idle",
+          "uncertainty": 0.009,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 6,
+          "mode": "safe_idle",
+          "uncertainty": 0.004,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 7,
+          "mode": "safe_idle",
+          "uncertainty": 0.004,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 8,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 9,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 10,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 11,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 12,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 13,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 14,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 15,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 16,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 17,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 18,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 19,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 20,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 21,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 22,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 23,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 24,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 25,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 26,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 27,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 28,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 29,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 30,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 31,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 32,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 33,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 34,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 35,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 36,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 37,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 38,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        },
+        {
+          "step": 39,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_blue_bottle"
+        }
+      ],
+      "memory": {
+        "total": 2,
+        "L1": 2,
+        "L2": 0,
+        "L3": 0
+      }
+    },
+    {
+      "scenario": "B · 探索路径（人类不在场 → 自主探索读标签）",
+      "trace": [
+        {
+          "step": 0,
+          "mode": "safe_idle",
+          "uncertainty": 0.0,
+          "decision": "explore",
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 1,
+          "mode": "deep_dive",
+          "uncertainty": 0.453,
+          "decision": "explore",
+          "question": null,
+          "action": 2.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 2,
+          "mode": "deep_dive",
+          "uncertainty": 0.501,
+          "decision": "explore",
+          "question": null,
+          "action": 2.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 3,
+          "mode": "deep_dive",
+          "uncertainty": 0.5,
+          "decision": "explore",
+          "question": null,
+          "action": 2.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 4,
+          "mode": "deep_dive",
+          "uncertainty": 0.5,
+          "decision": "explore",
+          "question": null,
+          "action": 2.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 5,
+          "mode": "deep_dive",
+          "uncertainty": 0.5,
+          "decision": "explore",
+          "question": null,
+          "action": 2.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 6,
+          "mode": "deep_dive",
+          "uncertainty": 0.5,
+          "decision": "explore",
+          "question": null,
+          "action": 3.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 7,
+          "mode": "deep_dive",
+          "uncertainty": 0.499,
+          "decision": "explore",
+          "question": null,
+          "action": 3.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 8,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 9,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 10,
+          "mode": "safe_idle",
+          "uncertainty": 0.057,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 11,
+          "mode": "safe_idle",
+          "uncertainty": 0.005,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 12,
+          "mode": "safe_idle",
+          "uncertainty": 0.004,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 13,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 14,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 15,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 16,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 17,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 18,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 19,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 20,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 21,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 22,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 23,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 24,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 25,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 26,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 27,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 28,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 29,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 30,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 31,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 32,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 33,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 34,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 35,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 36,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 37,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 38,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        },
+        {
+          "step": 39,
+          "mode": "safe_idle",
+          "uncertainty": 0.003,
+          "decision": null,
+          "question": null,
+          "action": 5.0,
+          "target": "obj_labelled"
+        }
+      ],
+      "memory": {
+        "total": 1,
+        "L1": 1,
+        "L2": 0,
+        "L3": 0
+      }
+    }
+  ]
+}

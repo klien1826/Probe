@@ -1,0 +1,27 @@
+# ============================================================
+# 安全门禁参数（快系统）
+# 来源: 认知架构文档 · 区域四判断层
+# ============================================================
+
+physical:
+  # 重心投影超出支撑多边形 → 急停（HALT）
+  max_cop_offset_m: 0.10
+  # 关节角度接近限位比例 → 软停止（SOFT_STOP）
+  joint_limit_margin: 0.90        # 达到限位的 90% 即软停
+  # 前方落差 > 阈值 → 原地等待（WAIT）
+  max_drop_m: 0.10
+  # 电池 < 阈值 → 强制返回充电（RECHARGE）
+  min_battery_pct: 10.0
+  # 最大线速度 / 角速度（m/s, rad/s）
+  max_linear_vel: 0.5
+  max_angular_vel: 1.2
+
+objects:
+  # 危险物体类别 → 禁止触碰
+  forbidden_categories: ["high_voltage", "high_temperature", "sharp", "toxic", "flammable"]
+  # 保持距离（米）
+  keep_distance_m: 0.30
+
+system:
+  # 快系统是否启用硬中断（仿真中为软中断，真实部署接实时线程）
+  hard_realtime: false

@@ -1,0 +1,50 @@
+# ============================================================
+# 好奇触发阈值（预测方差触发器）
+# 来源: 认知架构文档 · 区域二理解层 / 区域三探索层
+# ============================================================
+
+prediction:
+  # 好奇阈值：预测误差超过该值即触发"未知感知"
+  curiosity_error_threshold: 0.30
+  # 预测误差归一化上限（用于把 MSE 映射到 0~1）
+  error_normalizer: 1.0
+  # 碰撞事件对预测误差的加权系数
+  collision_error_weight: 2.0
+
+uncertainty:
+  # 世界模型后验方差的归一化权重（预测方差触发项）
+  variance_weight: 0.5
+  # 物体 ID 在记忆库中无匹配 → 直接触发（对象新颖性）
+  trigger_on_unknown_object: true
+
+exploration:
+  # 探索模式切换阈值（intrinsic reward = 预测误差 + 方差项）
+  modes:
+    - name: "safe_idle"        # 安全待机
+      min_intrinsic: 0.0
+    - name: "review_consolidate"  # 复习巩固
+      min_intrinsic: 0.10
+    - name: "deep_dive"        # 深度钻研
+      min_intrinsic: 0.30
+    - name: "broad_scan"       # 广泛扫描
+      min_intrinsic: 0.60
+
+decision:
+  # 双路径决策评分表（总分 0-10，>= ask_threshold 问人，否则自主探索）
+  ask_threshold: 6.0
+  weights:
+    risk_level: 0.25
+    human_idle: 0.20
+    exploration_cost: 0.20
+    task_priority: 0.20
+    object_dynamicity: 0.15
+
+question:
+  # 同场景提问频率限制（次/分钟）
+  max_per_minute: 3
+
+arbiter:
+  # 过度提问 → 强制切换至探索
+  max_questions_per_minute: 3
+  # 无效循环上限 → 标记"不可解"并跳过
+  max_retry_cycles: 5
